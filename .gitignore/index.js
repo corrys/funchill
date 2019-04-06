@@ -42,6 +42,13 @@ bot.on("message", async function(message) {
             message.react("✅")
         break
     };
+    const command = args.shift().toLowerCase();
+
+
+    if command == "clap"){
+        message.reply('applaudit !👏👏👏')
+        console.log("Commande !clap demander")
+    }
 });
 
 
