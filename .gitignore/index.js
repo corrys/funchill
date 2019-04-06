@@ -20,6 +20,30 @@ bot.on("message", async function(message) {
         message.channel.send("test")
         break;
     }
+    switch (args[0].toLowerCase()) {
+        case "membres":
+      		message.channel.send("", {    
+            embed: {
+                color: 0xFF0000, 
+                author:  message.author.name,
+                title: '', 
+                description: '', 
+                fields: [
+                    {
+                        name: "Voici le nombre d'utilisateurs sur le discord !",
+                        value: bot.users.size + '',
+                        inline: false
+                   }],                     
+                                   footer: {
+            text: '',
+          },
+            }
+        });
+            message.react("✅")
+        break
+    };
 });
+
+
 
 bot.login(process.env.TOKEN);
