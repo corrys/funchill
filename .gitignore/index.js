@@ -20,6 +20,10 @@ bot.on("message", async function(message) {
         message.channel.send("test")
         break;
     }
+
+    if(message.content === 'funchill') {
+        message.reply('<3')
+    }
     
 });
 
