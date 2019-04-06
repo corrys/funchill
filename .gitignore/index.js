@@ -1,32 +1,7 @@
-var findYoutubeUrls = require('find-youtube-urls');
-const GoogleImages = require('google-images');
-const SteamTotp = require('steam-totp');
-const Discord = require('discord.js');
-const fortnite = require('fortnite');
-var getJSON = require('get-json');
-var memes = require('dankmemes');
-var YTDL = require('ytdl-core');
-const chalk = require('chalk');
-var path = require('path');
-const ms = require('ms');
-var fs = require('fs');
-var request = require('request');
-var cheerio = require('cheerio');
-
-const configS = require('./settingsConfig/ConfigSammy.json');
-const configJ = require('./settingsConfig/ConfigJack.json');
-const configB = require('./settingsConfig/ConfigBen.json');
-
-var JackCode = SteamTotp.getAuthCode(configJ.sharedSecret);
-var BenCode = SteamTotp.getAuthCode(configB.sharedSecret);
-var SammyCode = SteamTotp.getAuthCode(configS.sharedSecret);
-
-var settings = './settingsConfig/settings.json';
-var file = require(settings)
+const Discord = require("discord.js");
 
 // require('console-stamp')(console, '[HH:MM:ss]');
 
-const TOKEN = file.TOKEN;
 const GreenStyle = chalk.green;
 var NOW_PLAYING = "Nothing";
 
