@@ -24,6 +24,10 @@ bot.on("message", async function(message) {
     if(message.content === 'funchill') {
         message.reply('<3')
     }
+bot.on('messageCreate', (msg) => {                     // When a message is created
+        if(msg.content.includes('1337')) {                 // If the message content includes "1337"
+            bot.createMessage(msg.channel.id, 'damn it');  // Send a message in the same channel with "damn it"
+        }
     
 });
 
